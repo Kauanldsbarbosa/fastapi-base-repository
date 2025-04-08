@@ -24,3 +24,6 @@ ruff-fix:
 coverage:
 	poetry run coverage run -m pytest
 
+setup:
+	cp -n config/env-example .env || echo ".env already exists"
+	
