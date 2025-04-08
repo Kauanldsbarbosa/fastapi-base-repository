@@ -1,4 +1,4 @@
-.PHONY: test create-requirements makemigrations migrate ruff-check ruff-fix coverage test
+.PHONY: test create-requirements makemigrations migrate ruff-check ruff-fix coverage test setup
 
 test:
 	docker-compose run --rm --user 1000 apistartkit sh -c "pytest"
@@ -26,4 +26,3 @@ coverage:
 
 setup:
 	cp -n config/env-example .env || echo ".env already exists"
-	
